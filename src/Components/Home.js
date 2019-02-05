@@ -3,7 +3,7 @@ import axios from 'axios';
 import Result from './Components/Result';
 import './App.scss';
 
-class App extends Component {
+class Home extends Component {
   render() {
     this.state = {
       cities:[

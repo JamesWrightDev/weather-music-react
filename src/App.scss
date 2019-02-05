@@ -3,13 +3,12 @@
 $col1: #ff6961;
 $col2: #eee;
 
-html{
-    background-color: #2F3743;
-}
+
 .wrapper{
     display: flex;
     flex-direction: column;
     margin: 8rem 1em;
+    background-color: #2F3743;
     @media screen and (min-width: 900px) {
         margin: 100px 2em;
     }
