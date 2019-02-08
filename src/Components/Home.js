@@ -1,7 +1,11 @@
 import React, { Component } from 'react';
+import { Route, NavLink } from 'react-router-dom'
+
 import axios from 'axios';
-import Result from './Components/Result';
-import './App.scss';
+import Result from './Result';
+
+
+import './Home.scss';
 
 class Home extends Component {
   render() {
@@ -11,6 +15,7 @@ class Home extends Component {
         {name: 'New York', id: 5128638},
         {name: '東京', id: 1850692}]
     }
+    const name = 'james';
     const fetchCity = (id, city) =>{
       console.log('city id:'+id);
       axios.get('http://api.openweathermap.org/data/2.5/weather?',{
@@ -28,18 +33,21 @@ class Home extends Component {
     const cityList = this.state.cities.map(function(item){
       return(
         <div>
-        <h1 onClick={() => fetchCity(item.id)}>{item.name}</h1>
+        <NavLink exact to="/result">
+          <h1 onClick={() => fetchCity(item.id)}>{item.name}</h1>
+        </NavLink>
         </div>
         
       );
     })
     return (
       <div className="wrapper">
+      <Route path='/' Component={Home}></Route>
         {cityList}
-        <Result/>
+   
       </div>
     );
   }
 }
 
-export default App;
+export default Home;

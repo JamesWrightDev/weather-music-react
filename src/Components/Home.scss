@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:800');
+
+$col1: #ff6961;
+$col2: #eee;
+*{
+    box-sizing: border-box;
+}
+
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    background-color: #2F3743;
+    height: 100vh;
+    padding: 2em 1em;
+    @media screen and (min-width: 900px) {
+    
+    }
+}
+h1{
+    display: inline-block;
+    font-family: Raleway, Arial, Helvetica, sans-serif;
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 14vw;
+    color: $col1;
+    margin: 10px 0;
+    transition: color 0.3s ease;
+    &:hover{
+        color: $col2;
+        cursor: pointer;
+    };
+    @media screen and (min-width: 868px) {
+        font-size: 9rem;
+    }
+}

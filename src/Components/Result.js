@@ -1,12 +1,14 @@
 import React from 'react'
 
-export default function Result() {
+export default function Result(props) {
   return (
     <div>
-        <h1>Hello</h1>
-        <button>View Playlist</button>
-        <h3>Clear</h3>
-        <h3>65F</h3>
+        <div className="wrapper">
+          <h1>{props.name}</h1>
+          <button>View Playlist</button>
+          <h3>{props.weather}</h3>
+          <h3>{props.temp}</h3>
+        </div>
     </div>
   )
 }
