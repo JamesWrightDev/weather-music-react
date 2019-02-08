@@ -41,10 +41,8 @@ class Home extends Component {
       );
     })
     return (
-      <div className="wrapper">
-      <Route path='/' Component={Home}></Route>
+      <div>
         {cityList}
-   
       </div>
     );
   }
